@@ -1,0 +1,465 @@
+/*
+Theme Name: Landing Page Theme
+Theme URI: google.com
+Description: This theme is totally amazing and cool
+Version: 1.0
+Author: Healoz
+Author URI: laureneaster.online
+*/
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+}
+
+/* fonts */
+
+h1, h2, h3, h4 {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 700;
+}
+
+p {
+    font-size: 1rem;
+}
+
+/* Default styles */
+
+:root {
+
+    /* colours */
+    --primary: #F97068;
+    --secondary: #FCF8ED;
+    --grey: #5B5B5B;
+
+    /* styling */
+    --border-radius: 3px;
+    --border-width: 1px;
+
+    /* sizing */
+    --max-width: 1120px;
+
+    /* animation */
+    --transition: 0.2s ease-in-out all;
+}
+
+body {
+    background-color: var(--secondary);
+}
+
+/* Navigation */
+
+.navbar {
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+}
+
+.nav-center {
+    width: 90vw;
+    max-width: var(--max-width);
+    display: flex;
+    align-items: center;
+    /* display: flex;
+    align-items: center; */
+    /* background-color: blue; */
+}
+
+.nav-header {
+    height: auto;
+    margin-right: 4rem;
+    justify-content: space-between;
+    display: flex;
+    /* background-color: green; */
+    align-items: center;
+}
+
+.nav-header img {
+    width: 200px;
+    transition: var(--transition);
+}
+
+.nav-header img:hover {
+    transform: scale(1.05);
+}
+
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+    width: 100%;
+    text-align: right;
+    justify-content: flex-end;
+    /* background-color: blue; */
+}
+
+.nav-link {
+    color: black;
+    text-decoration: none;
+    padding: 0;
+    border-top: none;
+    margin-right: 3rem;
+    display: block;
+    text-align: center; 
+    transition: var(--transition);
+}
+
+.nav-link::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background-color: var(--primary);
+    display: block;
+    margin: auto;
+    margin-top: 0.3rem;
+    transition: var(--transition);
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+.nav-selected::after {
+    width: 100%;
+}
+
+
+
+.btn {
+    text-decoration: none;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+    color: black;
+    padding: 0.75rem 1.25rem;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: black;
+    color: white;
+    border-color: black;
+}
+
+/* Display */
+
+.display-container {
+    justify-content: center;
+    display: flex;
+    margin-top: 4rem;
+    /* align-items: center; */
+}
+
+.display-center {
+    width: 90vw;
+    max-width: var(--max-width);
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    min-height: 50vh;
+}
+
+.display-left {
+    /* background-color: blueviolet; */
+    width: 50%;
+    align-items: center;
+    margin-right: 2rem;
+    /* padding: 2rem; */
+}
+
+.display-left h3 {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+.display-left h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+.display-left span {
+    background-color: var(--primary);
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: var(--border-radius);
+    font-family: 'Ubuntu', sans-serif;
+    transition: var(--transition);
+}
+
+.display-left span:hover {
+    color: white;
+    background-color: black;
+}
+
+
+.display-left p {
+    color: var(--grey);
+    margin-bottom: 2rem;
+}
+
+.form-row {
+    /* background-color: red; */
+    display: flex;
+}
+
+.form-row input {
+    height: 3rem;
+    width: 60%;
+    background-color: transparent;
+    border-style: solid;
+    border-width: 0.1rem;
+    border-radius: var(--border-radius);
+    padding: 1rem;
+    margin-right: 1rem;
+}
+
+
+.form-row button {
+    background-color: var(--primary);
+    border: none;
+    max-height: 3rem;
+}
+
+.display-right {
+    /* background-color: red; */
+    width: 50%;
+    display: block;
+    overflow: hidden;
+}
+
+.display-right img {
+    height: 50vh;
+    width: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.display-right img:hover {
+    transform: rotate(3deg) scale(0.95);
+    /* transform: scale(0.9); */
+    
+}
+
+/*-------- Perks -------*/
+
+.perks {
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.perks-center {
+    width: 90vw;
+    max-width: var(--max-width);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* background-color: blue; */
+}
+
+.perk {
+    /* background-color: rgb(209, 209, 209); */
+    padding: 1rem;
+    transition: var(--transition);
+}
+
+.perk:hover {
+    transform: scale(1.05);
+}
+
+.perk i {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    color: var(--primary);
+}
+
+.perk p {
+    color: var(--grey);
+    margin-top: 1rem;
+}
+
+/*-------- Video section -------*/
+
+.video-section {
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.video-center {
+    width: 90vw;
+    max-width: var(--max-width);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: blue; */
+}
+
+.video-section h1 {
+    font-size: 2.3rem;
+}
+
+.video-section p {
+    color: var(--grey);
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.video-container {
+    width: 100%;
+    
+    
+    /* background-color: green; */
+}
+
+.video-container iframe {
+    object-fit: cover;
+    width: 100%;
+    aspect-ratio: 16/9;
+    height: 50vh;
+    /* height: auto; */
+}
+
+/*-------- Pricing section -------*/
+
+.pricing {
+    margin-bottom: 4rem;
+}
+
+.pricing-header {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+.pricing-header h1 {
+    font-size: 2.3rem;
+}
+
+.pricing-header p {
+    color: var(--grey);
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.pricing-cards {
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.pricing-card {
+    border-style: solid;
+    border-width: 0.1rem;
+    border-radius: var(--border-radius);
+    padding: 1.5rem;
+    min-width: 15rem;
+    width: 22vw;
+}
+
+.header-subtitle {
+    color: var(--grey);
+    margin-top: 0.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.price {
+    display: flex;
+    gap: 0.25rem;
+    align-items: baseline;
+    margin-bottom: 0.75rem;
+}
+
+.price h1 {
+    font-size: 3.75rem;
+}
+
+.price p {
+    font-weight: bold;
+}
+
+.subtitle {
+    font-weight: bold;
+    margin-bottom: 0.75rem;
+}
+
+.perk-row {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.perk-row i {
+    color: var(--primary);
+}
+
+.perks-list {
+    margin-bottom: 2rem;
+}
+
+.pricing-btn {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: transparent;
+}
+
+.special-btn {
+    background-color: var(--primary);
+    border: none;
+}
+
+/*-------- Footer -------*/
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 6rem;
+    background-color: black;
+    color: white;
+    flex-direction: column;
+}
+
+.footer-center {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: blue; */
+    width: 90vw;
+    max-width: var(--max-width);
+}
+
+footer img {
+    width: 200px;
+    cursor: pointer;
+}
+
+.social-media-icons {
+    font-size: 1.25rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.social-media-icons i {
+    cursor: pointer;
+}
+
+
+
+
